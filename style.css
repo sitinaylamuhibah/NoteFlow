@@ -1,0 +1,211 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  margin: 0;
+  transition: 0.3s;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+header input {
+  margin-top: 10px;
+  padding: 10px;
+  width: 60%;
+  border-radius: 10px;
+  border: none;
+}
+
+header button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255,255,255,0.2);
+  color: white;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+/* STATS */
+.stats {
+  margin-bottom: 10px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* FORM */
+.form {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.form input,
+.form textarea,
+.form button {
+  width: 100%;
+  box-sizing: border-box; /* 🔥 FIX BIAR RATA */
+}
+
+.form input, 
+.form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border: 1px solid #2563eb;
+}
+
+.form button {
+  padding: 12px;
+  background: #2563eb; 
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: block;
+}
+
+.form button:hover {
+  background: #1d4ed8;
+}
+
+/* NOTES */
+.notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  align-items: stretch;
+}
+
+/* CARD */
+.note {
+  padding: 15px;
+  border-radius: 12px;
+  transition: 0.3s;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  min-height: 180px;
+}
+
+.note:hover {
+  transform: translateY(-5px);
+}
+
+.note h3 {
+  margin: 0;
+}
+
+.note small {
+  display: block;
+  margin: 5px 0;
+  opacity: 0.7;
+}
+
+.note p {
+  margin: 10px 0;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ACTIONS */
+.actions {
+  margin-top: auto;
+}
+
+.actions button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete {
+  background: red;
+  color: white;
+}
+
+.edit {
+  background: orange;
+  color: white;
+}
+
+/* PIN */
+.pin {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* FAB */
+.fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2563eb;
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* EMPTY */
+.empty {
+  text-align: center;
+  margin-top: 30px;
+  opacity: 0.6;
+}
+
+/* DARK MODE */
+.dark {
+  background: #0f172a;
+  color: white;
+}
+
+.dark .form {
+  background: #1e293b;
+}
+
+.dark .note {
+  background: #1e293b !important;
+}

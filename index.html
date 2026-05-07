@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>NoteFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>📝 NoteFlow</h1>
+  <input type="text" id="search" placeholder="Cari catatan...">
+  <button onclick="toggleDark()">🌙</button>
+</header>
+
+<div class="container">
+
+  <div class="stats" id="stats"></div>
+
+  <div class="form">
+    <input type="text" id="title" placeholder="Judul catatan">
+    <textarea id="content" placeholder="Isi catatan..."></textarea>
+    <button onclick="addNote()">Simpan</button>
+  </div>
+
+  <div id="notes" class="notes"></div>
+  <div id="empty" class="empty">Belum ada catatan 😢</div>
+
+</div>
+
+<div class="fab" onclick="scrollToTop()">+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
